@@ -1,0 +1,86 @@
+header{
+    position: relative;
+}
+body{
+    background-image: -o-linear-gradient(toright, pink,purple);
+    background-color: rgb(234,224,223);
+}
+a{
+    display: inline;
+    font-size: 30px;
+    color: black;
+    padding: 30px;
+    text-decoration: none;
+    font-style: italic;
+    margin:10px;
+}
+a:hover{
+    background-color: orange;
+    opacity: 0.7;
+    color: white;
+    height: 30px;
+    border-radius: 20px;
+}
+a.active{
+    background-color: orange;
+    opacity: 0.7;
+    color: white;
+}
+.list{
+    float:right;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    margin-left: 700PX;
+    font-size: 25px;
+    font-style: oblique;
+    border : none;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: teal;
+}
+.fimg{
+    display: block;
+    width:100%;
+    height: 500px;
+    margin-top: 40px;
+    background-image: url("d:/webpages/imgs/TOUR.jpg");
+    background-size: cover;
+}
+.fimg:hover{
+    background-image: url("d:/webpages/imgs/vietnam.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: ease-in;
+}
+.sub{
+    display: inlne;
+    width: 250px;
+    height: 500px;
+    border:1px solid #000;
+    padding: 10px;
+    margin-left:20px;
+    float: left;
+    margin-bottom: 30px;
+    background-image: linear-gradient(white,rgb(243, 217, 221));
+    background-color: white;
+}
+img{
+    width:250px;
+    height:250px;
+}
+img:hover{
+    opacity: 0.5;
+}
+.dis{
+    width: 250px;
+    display: block;
+    font-size: 25px;
+}
+input{
+    width: 40px;
+}
