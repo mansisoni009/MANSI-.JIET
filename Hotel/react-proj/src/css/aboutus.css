@@ -1,0 +1,17 @@
+.head{
+    background-image: url(../Components/rajasthan.jpg);
+    width: 90%;
+    height: 340px;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+    padding: 2%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+p{
+    font-size: 10px;
+}
