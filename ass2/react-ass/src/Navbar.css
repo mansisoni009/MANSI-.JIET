@@ -1,0 +1,34 @@
+.navhead{
+    color : palevioletred;
+    display: inline-block;
+    width: 300px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #2E4053;
+    height: 48px;
+}
+.topnav a {
+    display: inline-block;
+    float: left;
+    color:  white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    color: #AED6F1;
+}
+  
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: 1px solid #000000;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+  
