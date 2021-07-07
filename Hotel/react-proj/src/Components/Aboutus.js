@@ -1,9 +1,10 @@
 import React from "react";
-import "../css/aboutus.css";
+import "../css/aboutus.css"; 
+import aboutUsImg from "../Images/aboutUsImg.jpg"
 const Aboutus = () => {
     return(
         <div>
-         <h1 className="head"> About us</h1>,
+         <img src={aboutUsImg} alt="about us image"/>
          <p>
              This site is made by a team of three members Mansi Soni , Ananya Sharma and Khushi Jhala.
              We all are persuading Engineering from JIET Institute.

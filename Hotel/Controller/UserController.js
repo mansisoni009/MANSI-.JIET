@@ -1,13 +1,12 @@
-const User = require("../Modal/user");
+const User = require("../Model/user");
 const mongoose = require("mongoose");
 const JWT = require("jsonwebtoken");
 
 
 exports.signup = (req,res) => {
-    let {firstName , lastName , email , password} = req.body;
+    let {userName , email , password} = req.body;
     let user = new User({
-        firstName ,
-        lastName ,
+        userName ,
         email , 
         password ,
     });

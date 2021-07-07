@@ -1,0 +1,40 @@
+.navhead{
+    color : Tomato;
+    display: inline-block;
+    width: 300px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #2E4053;
+    height: 48px;
+}
+.topnav a {
+    display: inline-block;
+    float: left;
+    color:  white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+  /* Change the color of links on hover */
+.topnav a:hover {
+    color: #AED6F1;
+}
+  
+  /* Style the "active" element to highlight the current page */
+/* .topnav a.active {
+    color: white;
+}
+   */
+  /* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: 1px solid #000000;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+  

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const JWT = require("jsonwebtoken");
-const Admin = require("../Modal/Admin");
+const Admin = require("../Model/Admin");
+
 
 exports.signup =(req,res) => {
     let {userName , email , password} = req.body ;
@@ -45,3 +46,5 @@ exports.login = (req,res) => {
         return res.status(404).send(`User with email ${email} doesn't exist.`);
     });
 };
+
+ 

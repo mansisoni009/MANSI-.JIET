@@ -1,5 +1,5 @@
 .footer{
-    position: absolute;
+    position: relative;
     bottom: 0px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -9,10 +9,15 @@
     height: 100px;
     padding: 20px;
 }
-a{
+footer a{
     text-decoration: none;
     color: #ffffff;
 }
 a:hover{
     text-decoration: underline;
+}
+.header{
+    background-color: #ffffff;
+    height: 30%;
+    padding: 1%;
 }

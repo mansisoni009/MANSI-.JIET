@@ -1,33 +1,74 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import {BrowserRouter as Router , Redirect, Route , Switch,} from "react-router-dom";
 import "./App.css";
-import Aboutus from "./Components/Aboutus";
-import ContactUs from "./Components/Contactus";
+import AboutUs from "./Components/AboutUs";
+import ContactUs from "./Components/ContactUs";
+import Homepage from "./Components/Homepage";
+import BookNow from "./Components/BookNow";
+import SingleHotel from "./Components/SingleHotel";
+import Navbar from "./Components/Navbar";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
+import AdminLogin from "./Components/AdminLogin";
 
+const App = () => {
+  const [ user, setUser ] =useState({});
+  const [booking , setbooking] = useState({});
+  const[hotel , sethotel] = useState({});
 
-const App =() => {
+   useEffect(() => {
+    let savedUser = localStorage.getItem("user");
+    if(savedUser && Object.keys(user).length === 0 ){
+      setUser(JSON.parse(savedUser).user);
+    }
+  },[user]); 
+
+  useEffect(() => {
+    let savedHotel = localStorage.getItem("hotel");
+    if(savedHotel && Object.keys(hotel).length === 0 ){
+      setUser(JSON.parse(savedHotel).hotel);
+    }
+  },[hotel]); 
+
+  useEffect(() => {
+    let savedBooking = localStorage.getItem("booking");
+    if(savedBooking && Object.keys(booking).length === 0 ){
+      setUser(JSON.parse(savedBooking).booking);
+    }
+  },[booking]);
+
   return (
     <Router>
       <div className={"header"} id={"top"}>
-        <h2>Hotel Booking</h2>
-        
+        <Navbar />
       </div>
       <Switch>
         <Route path={"/"}exact>
-          <h1>homepage</h1>
+          <Homepage  
+              hotel = {hotel}
+             setUserState={sethotel}/>
         </Route>
-        <Route path={"/signup"}>
-          <h1>signup</h1>
+        <Route path={"/booking"}>
+          <BookNow setUserState={setbooking}/>
+        </Route>
+        <Route path={"/Hotels/:slug"}exact>
+          <SingleHotel />
+        </Route>
+       <Route path={"/signup"}>
+          <Signup setUserState={setUser}/>
         </Route>
         <Route path={"/login"}>
-          <h1>login</h1>
+          <Login setUserState={setUser}/>
         </Route>
         <Route path={"/about_us"}>
-          < Aboutus />
+          < AboutUs />
         </Route>
         <Route path={"/contact_us"}>
           <ContactUs />
         </Route>
+        <Route path={"/AdminLogin"}>
+          <AdminLogin setUserState={setUser}/>
+          </Route>
         <Route path={"/404"}>
           <h1>Page Not Found</h1>
         </Route>
